@@ -1,0 +1,67 @@
+div.dataTables_wrapper div.dataTables_filter {
+    width: 100% !important;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    div.dataTables_wrapper div.dataTables_filter {
+        width: 100% !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    div.dataTables_wrapper div.dataTables_filter {
+        width: 100% !important;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    div.dataTables_wrapper div.dataTables_filter {
+        width: 40% !important;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    div.dataTables_wrapper div.dataTables_filter {
+        width: 40% !important;
+    }
+}
+div.dataTables_wrapper div.dataTables_filter label {
+    width: 100%;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+    background-color: #f5f8fa;
+    border-radius: 1.15rem!important;
+}
+
+.table td, .table th, .table tr {
+    border-width: 0px;
+}
+
+table.dataTable>thead .sorting:after, table.dataTable>thead .sorting:before, table.dataTable>thead .sorting_asc:after, table.dataTable>thead .sorting_asc:before, table.dataTable>thead .sorting_desc:after, table.dataTable>thead .sorting_desc:before {
+    transform: none;
+}
+
+table.dataTable>thead .sorting, table.dataTable>thead .sorting_asc, table.dataTable>thead .sorting_asc_disabled, table.dataTable>thead .sorting_desc, table.dataTable>thead .sorting_desc_disabled {
+    cursor: pointer;
+    position: relative;
+}
+
+/* PROCESSING  */
+.dataTables_wrapper .dataTables_processing {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 85px;
+    border-radius: 4px;
+    margin-left: -100px;
+    margin-top: -26px;
+    text-align: center;
+    padding: 1em 0;
+    z-index: 1;
+    box-shadow: 0 .25rem .25rem rgba(0,0,0,.075)!important;
+}
