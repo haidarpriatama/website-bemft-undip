@@ -212,46 +212,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
-                            <span class="menu-link py-3">
-                                <span class="menu-title">Teknik Shop</span>
-                                <span class="menu-arrow d-lg-none"></span>
-                            </span>
-                            <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-accordion mb-1">
-                                    <span class="menu-link py-3">
-                                        <span class="menu-title">Waroenk BEM FT</span>
-                                        <span class="menu-arrow"></span>
-                                    </span>
-                                    <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-                                        @foreach ($navbarproductcategories as $category)
-                                            <div class="menu-item">
-                                                <a class="menu-link py-3" href="{{ route('teknikshop', $category->slug) }}">
-                                                    <span class="menu-title">{{ $category->name }}</span>
-                                                </a>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-accordion mb-1">
-                                    <a href="{{ route('pages.hmarketplace') }}">
-                                        <span class="menu-link py-3">
-                                            <span class="menu-title">HMarketPlace</span>
-                                            <span class="menu-arrow"></span>
-                                        </span>
-                                    </a>
-                                    <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-                                        @foreach ($navbarjurusans as $jurusan)
-                                        <div class="menu-item">
-                                            <a class="menu-link py-3" href="{{ route('pages.hmarketlist', $jurusan->slug) }}">
-                                                <span class="menu-title">{{ $jurusan->name }}</span>
-                                            </a>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="menu-item">
                             <a class="menu-link py-3" target="_blank" href="{{ settings('content.linkteknikdalamangka') }}">
                                 <span class="menu-title">Teknik Dalam Angka</span>

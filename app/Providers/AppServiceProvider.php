@@ -108,6 +108,11 @@ class AppServiceProvider extends ServiceProvider
             ]);
         });
 
+        Filament::registerRenderHook(
+            'sidebar.end',
+            fn (): string => Blade::render('<div class="px-4 pb-4"><a href="{{ url(\'/\') }}" class="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium transition rounded-lg text-primary-700 bg-primary-500/10 hover:bg-primary-500/20 dark:text-primary-400 dark:bg-primary-500/10 dark:hover:bg-primary-500/20"><x-heroicon-o-arrow-left class="w-5 h-5"/> Back to Home</a></div>')
+        );
+
         // Register your custom implementation of the Settings page.
         $this->app->singleton(Settings::class, \App\Filament\Pages\Settings::class);
 

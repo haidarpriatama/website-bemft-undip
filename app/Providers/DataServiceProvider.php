@@ -24,7 +24,7 @@ class DataServiceProvider extends ServiceProvider
         });
 
         $this->app->singleton('navbarjurusan', function () {
-            return Jurusan::all();
+            return Jurusan::orderByRaw("FIELD(name, 'Teknik Sipil', 'Arsitektur', 'Teknik Kimia', 'Teknik Mesin', 'Teknik Elektro', 'Perencanaan Wilayah & Kota', 'Perencanaan Wilayah dan Kota', 'Teknik Industri', 'Teknik Lingkungan', 'Teknik Perkapalan', 'Teknik Geologi', 'Teknik Geodesi', 'Teknik Komputer')")->get();
         });
 
         $this->app->singleton('navbarproductcategories', function () {

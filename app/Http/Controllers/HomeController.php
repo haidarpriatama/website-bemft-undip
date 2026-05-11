@@ -5,15 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Bidang;
 use App\Models\Bso;
 use App\Models\Event;
-use App\Models\Jurusan;
 use App\Models\Pengurus;
 use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\PressRelease;
 use App\Models\Prestasi;
-use App\Models\Product;
-use App\Models\ProductBem;
-use App\Models\ProductCategory;
 use App\Models\Profile;
 use App\Models\Upk;
 use Illuminate\Http\Request;
@@ -114,15 +110,6 @@ class HomeController extends Controller
             ->with('pressreleases', $pressreleases);
     }
 
-    public function teknikshop($slug) {
-        $categories = ProductCategory::with(['products'])->where('slug', $slug)->first();
-        $products = ProductBem::where('category_id', $categories->id)->latest()->paginate(8);
-
-        return view('layouts.layout_teknikshop')
-            ->with('products', $products)
-            ->with('categories', $categories);
-    }
-
     public function infocahteknik($type) {
 
         $category = PostCategory::where('slug', $type)->first();
@@ -150,23 +137,6 @@ class HomeController extends Controller
         return view('layouts.layout_news')
                 ->with('relateds', $relateds)
                 ->with('post', $post);
-    }
-
-    public function hmarketplace() {
-
-        $jurusans = Jurusan::with('products')->get();
-
-        return view('hmarketplace')
-                ->with('jurusans', $jurusans);
-    }
-
-    public function hmarketlist($slug) {
-        $jurusan = Jurusan::where('slug', $slug)->first();
-        $products = Product::where('jurusan_id', $jurusan->id)->latest()->paginate(3);
-
-        return view('layouts.layout_hmarketlist')
-            ->with('products', $products)
-            ->with('jurusan', $jurusan);
     }
 
 }

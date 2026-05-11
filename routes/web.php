@@ -27,14 +27,9 @@ Route::prefix('pages')->group(function() {
     Route::get('upk', [HomeController::class, 'upk'])->name('pages.upk');
     Route::get('bso', [HomeController::class, 'bso'])->name('pages.bso');
     Route::get('pressrelease', [HomeController::class, 'pressrelease'])->name('pages.pressrelease');
-    Route::get('hmarketplace', [HomeController::class, 'hmarketplace'])->name('pages.hmarketplace');
-    Route::get('hmarketplace/{slug}', [HomeController::class, 'hmarketlist'])->name('pages.hmarketlist');
     Route::get('teknik-dalam-angka', [HomeController::class, 'teknikdalamangka'])->name('pages.teknikdalamangka');
     Route::prefix('news')->group(function() {
         Route::get('{type}', [HomeController::class, 'infocahteknik'])->name('news.type');
         Route::get('{type}/{slug}', [HomeController::class, 'post'])->name('news.post');
     });
-});
-Route::prefix('teknik-shop')->group(function() {
-    Route::get('{slug}', [HomeController::class, 'teknikshop'])->name('teknikshop');
 });
